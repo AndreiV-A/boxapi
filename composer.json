@@ -20,7 +20,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Maengkom\\Box\\": "src"
+            "Ecuation\\Box\\": "src"
         }
     },
     "minimum-stability": "dev"
