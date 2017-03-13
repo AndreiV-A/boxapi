@@ -10,19 +10,19 @@ To install into your project just run this command in terminal
 	
 After download completed, you can add this to your app.php config file 
 
-	Maengkom\Box\BoxAPIServiceProvider::class, // Laravel 5
+	Ecuation\Box\BoxAPIServiceProvider::class, // Laravel 5
 	
-	'Maengkom\Box\BoxAPIServiceProvider',      // Laravel 4
+	'Ecuation\Box\BoxAPIServiceProvider',      // Laravel 4
 	
 And if you want using Facade, you can use these two facade
 
 	/* Laravel 5 */
-	'BoxAU'     => Maengkom\Box\Facades\AppUserFacade::class,
-	'BoxSU'     => Maengkom\Box\Facades\StandardUserFacade::class,
+	'BoxAU'     => Ecuation\Box\Facades\AppUserFacade::class,
+	'BoxSU'     => Ecuation\Box\Facades\StandardUserFacade::class,
 
 	/* Laravel 4 */
-	'BoxAU'     => 'Maengkom\Box\Facades\AppUserFacade',
-	'BoxSU'     => 'Maengkom\Box\Facades\StandardUserFacade',
+	'BoxAU'     => 'Ecuation\Box\Facades\AppUserFacade',
+	'BoxSU'     => 'Ecuation\Box\Facades\StandardUserFacade',
 	
 BoxAU is used for App User for Enterprise box account. BoxSU is used for normal box user to access their asset in their box account.
 
@@ -43,11 +43,11 @@ After install using composer, you need configure some in ```bootstrap/app.php```
 	$app->withFacades();
 	
 	// Add these line below to use Facade
-	class_alias('Maengkom\Box\Facades\AppUserFacade', 'BoxAU');
-	class_alias('Maengkom\Box\Facades\StandardUserFacade', 'BoxSU');
+	class_alias('Ecuation\Box\Facades\AppUserFacade', 'BoxAU');
+	class_alias('Ecuation\Box\Facades\StandardUserFacade', 'BoxSU');
 	
 	// Register this service provider
-	$app->register('Maengkom\Box\BoxAPIServiceProvider');
+	$app->register('Ecuation\Box\BoxAPIServiceProvider');
 
 ## Common Installation
 
@@ -84,7 +84,7 @@ There are some configuration key to set in folder
 
 Configuration file will be put on folder 
 
-``app\config\packages\maengkom\boxapi\config.php``
+``app\config\packages\Ecuation\Boxapi\config.php``
 
 also like Laravel 5, you may set private key file in the root project folder
 

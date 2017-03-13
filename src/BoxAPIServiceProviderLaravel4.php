@@ -1,6 +1,6 @@
 <?php
 
-namespace Maengkom\Box;
+namespace Ecuation\Box;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -32,6 +32,6 @@ class BoxAPIServiceProviderLaravel4 extends ServiceProvider
             return new BoxAppUser( $app['config']->get('boxapi::config') );
         });
 
-        $app->alias('boxappuser', 'Maengkom\Box\BoxAppUser');
+        $app->alias('boxappuser', 'Ecuation\Box\BoxAppUser');
     }
 }

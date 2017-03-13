@@ -1,6 +1,6 @@
 <?php
 
-namespace Maengkom\Box;
+namespace Ecuation\Box;
 
 trait BoxContent {
 

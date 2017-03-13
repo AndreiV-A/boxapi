@@ -1,8 +1,8 @@
 <?php
 
-namespace Maengkom\Box\Test;
+namespace Ecuation\Box\Test;
 
-use Maengkom\Box\BoxAppuser;
+use Ecuation\Box\BoxAppuser;
 use PHPUnit_Framework_TestCase;
 
 require('vendor/autoload.php');

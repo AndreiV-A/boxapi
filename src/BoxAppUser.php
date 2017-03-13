@@ -1,6 +1,6 @@
 <?php
 
-namespace Maengkom\Box;
+namespace Ecuation\Box;
 
 use Config;
 use Lcobucci\JWT\Builder;

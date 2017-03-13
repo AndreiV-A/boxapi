@@ -1,6 +1,6 @@
 <?php
 
-namespace Maengkom\Box\Facades;
+namespace Ecuation\Box\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

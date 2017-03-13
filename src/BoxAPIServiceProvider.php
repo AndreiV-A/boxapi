@@ -1,6 +1,6 @@
 <?php
 
-namespace Maengkom\Box;
+namespace Ecuation\Box;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -55,16 +55,16 @@ class BoxAPIServiceProvider extends ServiceProvider
     /**
      * Return ServiceProvider according to Laravel version
      *
-     * @return \Maengkom\Box\Provider\ProviderInterface
+     * @return \Ecuation\Box\Provider\ProviderInterface
      */
     private function getProvider()
     {
         if ($this->app instanceof \Laravel\Lumen\Application) {
-            $provider = '\Maengkom\Box\BoxAPIServiceProviderLumen';
+            $provider = '\Ecuation\Box\BoxAPIServiceProviderLumen';
         } elseif (version_compare(\Illuminate\Foundation\Application::VERSION, '5.0', '<')) {
-            $provider = '\Maengkom\Box\BoxAPIServiceProviderLaravel4';
+            $provider = '\Ecuation\Box\BoxAPIServiceProviderLaravel4';
         } else {
-            $provider = '\Maengkom\Box\BoxAPIServiceProviderLaravel5';
+            $provider = '\Ecuation\Box\BoxAPIServiceProviderLaravel5';
         }
         return new $provider($this->app);
     }
