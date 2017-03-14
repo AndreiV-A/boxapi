@@ -13,7 +13,7 @@ class BoxAPIServiceProviderLaravel4 extends ServiceProvider
      */
     public function boot()
     {
-        $this->package('maengkom/boxapi');
+        $this->package('ecuation/boxapi');
     }
 
     /**
@@ -25,7 +25,7 @@ class BoxAPIServiceProviderLaravel4 extends ServiceProvider
     {
         $app = $this->app;
 
-        $app['config']->package('maengkom/boxapi', app_path().'/config/packages/maengkom/boxapi/');
+        $app['config']->package('ecuation/boxapi', app_path().'/config/packages/ecuation/boxapi/');
 
         // create appuser
         $app['boxappuser'] = $app->share(function ($app) {

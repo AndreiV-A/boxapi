@@ -6,7 +6,7 @@ This is a package can be used with PHP Project and especially integrate with Lar
 
 To install into your project just run this command in terminal 
 
-	composer require maengkom/boxapi
+	composer require ecuation/boxapi
 	
 After download completed, you can add this to your app.php config file 
 
@@ -32,7 +32,7 @@ After this don't forget to run this command below, to copy config file into conf
 	
 for Laravel 4, run this command in terminal
 
-	php artisan config:publish maengkom/boxapi
+	php artisan config:publish ecuation/boxapi
 
 
 ## Installation on Lumen
