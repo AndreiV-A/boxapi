@@ -39,8 +39,20 @@ class BoxAppUser
 	private $api_url 		= 'https://api.box.com/2.0';
 	private $upload_url 	= 'https://upload.box.com/api/2.0';
 
+	private $debug = false;
+
 	// This url below used for get App User access_token in JWT
 	private $audience_url 	= 'https://api.box.com/oauth2/token';
+
+	public function setDebug($active = true)
+	{
+		$this->debug = $active;
+	}
+
+	private function throwException($message)
+	{
+		throw new \Exception($message);
+	}
 
 	public function __construct(array $config = array())
 	{

@@ -226,14 +226,21 @@ trait BoxContent {
 
 	// ================================= Helper Methods ==================================
 
-	private function get($url, $json = false, $data = '') {
-		$data = shell_exec("curl $url $this->auth_header $data");
+	private function get($url, $json = false, $data = '')
+	{
+		$curl = ($this->debug) ? "curl -vi $url $this->auth_header $data" : "curl $url $this->auth_header $data";
+		$data = shell_exec($curl);
+
+		if($this->debug)
+			$this->throwException($data);
+
 		if ($json) {
 			return $data;
 		} else {
+
 			return json_decode($data, true);
 		}
-	} 
+	}
 
 	private function post($url, $json = false, $data = '') {
 		$data = shell_exec("curl $url $this->auth_header $data -X POST");
