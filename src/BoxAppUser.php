@@ -123,11 +123,11 @@ class BoxAppUser
 		
 		try
 		{
-	            $this->access_token = json_decode($result, true)["access_token"];
+		     $this->access_token = json_decode($result, true)["access_token"];
 		}
 		catch(\Exception $exception)
 		{
-		    throw new \Exception("Can't get the access_token for this user configuration...");
+		    throw new \Exception("Can't get the access_token for this user configuration...", 101);
 		}
 
 		$this->auth_header 	= "-H \"Authorization: Bearer $this->access_token\"";
